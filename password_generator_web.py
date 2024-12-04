@@ -30,10 +30,8 @@ if st.checkbox("Show Saved Passwords"):
     passwords = read_passwords_from_file()
     
     if passwords:
-        # Display the list of saved passwords
         st.write("Saved Passwords:")
-        for password in passwords:
-            st.write(password)
+        st.markdown("\n".join([f"- {password}" for password in passwords]))  # Bullet points for clarity
     else:
-        # Notify the user if no passwords are saved
         st.warning("No passwords saved yet.")
+
