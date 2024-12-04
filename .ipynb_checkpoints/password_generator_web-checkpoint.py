@@ -32,8 +32,7 @@ if st.checkbox("Show Saved Passwords"):
     if passwords:
         # Display the list of saved passwords
         st.write("Saved Passwords:")
-        for password in passwords:
-            st.write(password)
+        st.write("".join(passwords))
     else:
         # Notify the user if no passwords are saved
         st.warning("No passwords saved yet.")
